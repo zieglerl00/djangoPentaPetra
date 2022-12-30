@@ -1,5 +1,12 @@
 <section id="sidemenu" class="sidemenu" aria-expanded="false">
-
+    <ul class="text-white">
+        {% if user.is_authenticated %}
+            <li><a href="{% url "authentication:logout" %}">Logout</a></li>
+            <li><a href="{% url "authentication:protected" %}">Protected</a></li>
+        {% else %}
+            <li><a href="{% url "authentication:login" %}">Login</a></li>
+        {% endif %}
+    </ul>
 </section>
 
 <button id="sidemenu-toggler" class="sidemenu-close-btn lg:hidden">open</button>
