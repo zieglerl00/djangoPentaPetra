@@ -1,0 +1,24 @@
+.sidemenu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.sidemenu[aria-expanded="true"] {
+    width: 100px;
+}
+
+.sidemenu[aria-expanded="false"] {
+    width: 0;
+}
+
+.sidemenu-close-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
